@@ -33,10 +33,12 @@ on init
     write /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us 10000
     
     # update cpus for cpuset cgroup
-    write /dev/cpuset/foreground/cpus 0-2,4-7
     write /dev/cpuset/foreground/boost/cpus 0-7
-    write /dev/cpuset/background/cpus 0-2
+    write /dev/cpuset/foreground/cpus 0-6
+    write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/restricted/cpus 0-3
+    write /dev/cpuset/camera-daemon/cpus 0-7
     write /dev/cpuset/top-app/cpus 0-7
 
 on enable-low-power
