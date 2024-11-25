@@ -342,3 +342,10 @@ PRODUCT_COPY_FILES += \
 # Inherit the proprietary files
 $(call inherit-product-if-exists, device/xiaomi/miuicamera-rubyx/device.mk)
 $(call inherit-product, vendor/xiaomi/rubyx/rubyx-vendor.mk)
+
+# Enable DeviceAsWebcam support
+PRODUCT_PACKAGES += \
+    RubyxDeviceAsWebcam
+    
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.usb.uvc.enabled=true
