@@ -377,3 +377,6 @@ PRODUCT_COPY_FILES += \
 # Inherit the proprietary files
 $(call inherit-product-if-exists, device/xiaomi/miuicamera-rubyx/device.mk)
 $(call inherit-product, vendor/xiaomi/rubyx/rubyx-vendor.mk)
+
+# Signing keys
+-include vendor/lineage-priv/keys/keys.mk
