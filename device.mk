@@ -203,6 +203,10 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/seccomp,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy) \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
 
+# Media
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2-mtk-service
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.st \
